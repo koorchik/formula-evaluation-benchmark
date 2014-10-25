@@ -39,7 +39,7 @@ sub evaluate_ast(@ast) {
     my @evaluated_args;
 
     loop ( my $i = 1; $i < @ast.elems; $i++ ) {
-        if ( @ast[$i].isa('Array') ) {
+        if ( @ast[$i] ~~ Array ) {
             @evaluated_args.push( evaluate_ast( @ast[$i] ) );
         } else {
             @evaluated_args.push( @ast[$i] );
@@ -66,6 +66,8 @@ sub timeAST(@ast) {
     if (abs($sum - 3900000) > 0.001 ) {
         die "WRONG SUM $sum";
     }
+
+    say $sum;
 }
 
 my $ast = [$SUM,

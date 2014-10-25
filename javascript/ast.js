@@ -50,7 +50,9 @@ function timeAST(ast) {
 
     console.timeEnd('COMPUTE AST');
 
-    if ( Math.abs(sum - 3900000) > 0.001 ) throw 'WRONG SUM ' + sum;
+    if ( !sum || ( Math.abs(+sum - 3900000) > 0.001 ) ) {
+        throw 'WRONG SUM ' + sum;
+    }
 }
 
 var ast = [ SUM,

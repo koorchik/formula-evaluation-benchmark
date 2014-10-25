@@ -22,6 +22,6 @@ Here is the result for Macbook Pro 2013:
 2. NodeJS 0.10.33 - 0.18 sec
 3. PHP 5.5.14 - 2.9 sec
 4. Perl 5.20.1 - 3.2 sec
-5. Perl 6 (Rakudo Moar VM) - 392 sec (several months ago was ~500 sec)
-6. Perl 6 (Rakudo JVM) - 426 sec
-7. Perl 6 (Rakudo Parrot) - ~2440 sec
+5. Perl 6 (Rakudo Moar VM) - 110 sec
+6. Perl 6 (Rakudo JVM) - 160 sec
+7. Perl 6 (Rakudo Parrot) - ~810 sec
