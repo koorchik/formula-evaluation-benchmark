@@ -44,13 +44,13 @@ function timeAST(ast) {
 
     console.time('COMPUTE AST');
 
-    for (var i = 0; i <= iterations; i++) {
+    for (var i = 0; i < iterations; i++) {
         sum += evaluateAST(ast);
     }
 
     console.timeEnd('COMPUTE AST');
 
-    if ( Math.abs(sum - 3900039) > 0.001 ) throw 'WRONG SUM ' + sum;
+    if ( Math.abs(sum - 3900000) > 0.001 ) throw 'WRONG SUM ' + sum;
 }
 
 var ast = [ SUM,

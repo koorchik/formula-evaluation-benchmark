@@ -58,7 +58,7 @@ function timeAST($ast) {
 
     $time_start = microtime(true);
 
-    for ($i =0; $i <= $iterations; $i++ ) {
+    for ($i =0; $i < $iterations; $i++ ) {
         $sum += evaluateAst($ast);
     }
 
@@ -66,7 +66,7 @@ function timeAST($ast) {
 
     echo "COMPUTED [$iterations] ITERATIONS IN [$compute_time] SECONDS\n";
 
-    if ( abs($sum - 3900039 ) > 0.001 ) {
+    if ( abs($sum - 3900000 ) > 0.001 ) {
         die( "WRONG SUM $sum" );
     }
 }

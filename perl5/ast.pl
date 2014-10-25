@@ -69,7 +69,7 @@ sub timeAST {
     my $iterations = 100_000;
     my $sum = 0;
 
-    for (0..$iterations) {
+    for (1..$iterations) {
         $sum += evaluate_ast($ast);
     }
 
@@ -77,7 +77,7 @@ sub timeAST {
 
     print "COMPUTED [$iterations] ITERATIONS IN [$compute_time] SECONDS\n";
 
-    die "WRONG SUM $sum" if abs( $sum - 3900039) > 0.001; # ensure that code was executed
+    die "WRONG SUM $sum" if abs( $sum - 3900000) > 0.001; # ensure that code was executed
 }
 
 my $ast = [SUM,
