@@ -66,8 +66,6 @@ sub timeAST(@ast) {
     if (abs($sum - 3900000) > 0.001 ) {
         die "WRONG SUM $sum";
     }
-
-    say $sum;
 }
 
 my $ast = [$SUM,
