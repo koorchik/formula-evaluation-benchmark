@@ -12,11 +12,11 @@ We do calculation of abstract syntax tree that represents simple mathematical fo
         [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
     ]
 
-We do 100000 iterations and after comleting check the sum of all results to ensure that calculations were not skipped by optimizator.
+We do 100000 iterations and after comleting check the sum of all results to ensure that calculations were not skipped by optimizer.
 
 ## Results
 
-Here is the results for Macbook Pro 2013:
+Here is the result for Macbook Pro 2013:
 
 1. NodeJS 0.11.14 - 0.11 sec
 2. NodeJS 0.10.33 - 0.18 sec
