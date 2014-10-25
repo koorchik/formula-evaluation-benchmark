@@ -53,7 +53,7 @@ sub timeAST(@ast) {
     my $t0 = time;
 
     my $sum = 0;
-    my $iterations = 10_000;
+    my $iterations = 100_000;
 
     for (0..$iterations) {
         $sum += evaluate_ast(@ast);
