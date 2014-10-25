@@ -12,7 +12,7 @@ We do calculation of abstract syntax tree that represents simple mathematical fo
         [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
     ]
 
-We do 100000 iterations and after comleting check the sum of all results to ensure that calculations were not skipped by optimizer.
+We do 100000 iterations and after comleting check the sum of all results to ensure that the calculations were not skipped by optimizer.
 
 ## Results
 
