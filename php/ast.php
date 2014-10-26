@@ -34,7 +34,7 @@ $functions = array(
     }
 );
 
-function evaluateAst($ast) {
+function evaluateAST($ast) {
     global $functions;
     $oper = $ast[0];
     $func = $functions[$oper];
@@ -43,7 +43,7 @@ function evaluateAst($ast) {
 
     for ($i = 1; $i < count($ast); $i++) {
         if (is_array($ast[$i])) {
-            array_push( $evaluatedArgs,  evaluateAst($ast[$i]) );
+            array_push( $evaluatedArgs,  evaluateAST($ast[$i]) );
         } else {
             array_push( $evaluatedArgs, $ast[$i] );
         }
@@ -59,7 +59,7 @@ function timeAST($ast) {
     $time_start = microtime(true);
 
     for ($i =0; $i < $iterations; $i++ ) {
-        $sum += evaluateAst($ast);
+        $sum += evaluateAST($ast);
     }
 
     $compute_time = microtime(true) - $time_start;

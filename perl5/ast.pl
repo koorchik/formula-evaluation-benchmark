@@ -62,7 +62,7 @@ sub evaluate_ast {
     return $func->(\@evaluated_args);
 }
 
-sub timeAST {
+sub time_ast {
     my $ast = shift;
     my $t0 = [gettimeofday];
 
@@ -87,4 +87,4 @@ my $ast = [SUM,
     [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
 ];
 
-timeAST($ast);
+time_ast($ast);

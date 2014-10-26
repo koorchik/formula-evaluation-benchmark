@@ -49,7 +49,7 @@ sub evaluate_ast(@ast) {
     return $func(@evaluated_args);
 }
 
-sub timeAST(@ast) {
+sub time_ast(@ast) {
     my $t0 = time;
 
     my $sum = 0;
@@ -75,4 +75,4 @@ my $ast = [$SUM,
     [$SUBSTRACT,[$ADD,[$DEVIDE,[$MULTIPLY,40,50],60],70],80]
 ];
 
-timeAST($ast);
+time_ast($ast);
