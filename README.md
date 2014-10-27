@@ -25,3 +25,5 @@ Here is the result for Macbook Pro 2013:
 5. Perl 6 (Rakudo Moar VM) - 110 sec
 6. Perl 6 (Rakudo JVM) - 160 sec
 7. Perl 6 (Rakudo Parrot) - ~810 sec
+8. Go 1.3.3 (unidiomatic version) - 0.25 sec
+9. Go 1.3.3 (idiomatic version) - 0.026 sec
