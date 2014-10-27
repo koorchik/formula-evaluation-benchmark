@@ -1,4 +1,4 @@
-<?
+<?php
 
 const ADD       = 0;
 const SUBSTRACT = 1;
@@ -79,3 +79,5 @@ $ast = [SUM,
 ];
 
 timeAST($ast);
+
+?>
