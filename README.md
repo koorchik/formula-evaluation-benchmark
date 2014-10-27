@@ -27,3 +27,4 @@ Here is the result for Macbook Pro 2013:
 7. Perl 6 (Rakudo Parrot) - ~810 sec
 8. Go 1.3.3 (unidiomatic version) - 0.25 sec
 9. Go 1.3.3 (idiomatic version) - 0.026 sec
+10. Python 2.7.8 - 3.1 sec
