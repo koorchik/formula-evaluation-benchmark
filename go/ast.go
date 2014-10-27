@@ -6,6 +6,12 @@ import (
 	"time"
 )
 
+/*
+
+This is NOT idiomatic Go code. You should never write Go code like this.
+
+*/
+
 const (
 	ADD = iota
 	SUBSTRACT
@@ -32,7 +38,7 @@ var functions = map[int]func(args []float64) float64{
 	},
 
 	SUM: func(args []float64) float64 {
-		var sum float64 = 0
+		sum := 0.0
 
 		for _, arg := range args {
 			sum += arg
@@ -46,13 +52,13 @@ func evaluateAST(ast []interface{}) float64 {
 	oper := ast[0].(int)
 	funct := functions[oper]
 
-	var evaluatedArgs []float64
+	evaluatedArgs := make([]float64, 0, len(ast)-1) // 1. cuts 30%
 
-	for i := 1; i < len(ast); i++ {
-		if v, ok := ast[i].([]interface{}); ok {
-			evaluatedArgs = append(evaluatedArgs, evaluateAST(v))
+	for _, v := range ast[1:] { // 2. cuts 10%
+		if e, ok := v.([]interface{}); ok {
+			evaluatedArgs = append(evaluatedArgs, evaluateAST(e))
 		} else {
-			evaluatedArgs = append(evaluatedArgs, float64(ast[i].(int)))
+			evaluatedArgs = append(evaluatedArgs, float64(v.(int)))
 		}
 	}
 
@@ -61,7 +67,7 @@ func evaluateAST(ast []interface{}) float64 {
 
 func timeAST(ast []interface{}) {
 	iterations := 100000
-	var sum float64 = 0
+	sum := 0.0
 
 	time_start := time.Now()
 
@@ -73,8 +79,8 @@ func timeAST(ast []interface{}) {
 
 	fmt.Printf("COMPUTED [%d] ITERATIONS IN [%f] SECONDS\n", iterations, compute_time.Seconds())
 
-	if math.Abs(float64(sum-3900000)) > 0.001 {
-		panic(fmt.Sprintf("WRONG SUM %d", sum))
+	if math.Abs(sum-3900000.0) > 0.001 {
+		panic(fmt.Sprintf("WRONG SUM %f", sum))
 	}
 }
 
