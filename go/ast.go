@@ -16,7 +16,7 @@ const (
 	ADD = iota
 	SUBSTRACT
 	MULTIPLY
-	DEVIDE
+	DIVIDE
 	SUM
 )
 
@@ -33,7 +33,7 @@ var functions = map[int]func(args []float64) float64{
 		return args[0] * args[1]
 	},
 
-	DEVIDE: func(args []float64) float64 {
+	DIVIDE: func(args []float64) float64 {
 		return args[0] / args[1]
 	},
 
@@ -86,10 +86,10 @@ func timeAST(ast []interface{}) {
 
 func main() {
 	ast := []interface{}{SUM,
-		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DEVIDE, []interface{}{MULTIPLY, 10, 20}, 30}, 40}, 50},
-		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DEVIDE, []interface{}{MULTIPLY, 20, 30}, 40}, 50}, 60},
-		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DEVIDE, []interface{}{MULTIPLY, 30, 40}, 50}, 60}, 70},
-		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DEVIDE, []interface{}{MULTIPLY, 40, 50}, 60}, 70}, 80},
+		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DIVIDE, []interface{}{MULTIPLY, 10, 20}, 30}, 40}, 50},
+		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DIVIDE, []interface{}{MULTIPLY, 20, 30}, 40}, 50}, 60},
+		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DIVIDE, []interface{}{MULTIPLY, 30, 40}, 50}, 60}, 70},
+		[]interface{}{SUBSTRACT, []interface{}{ADD, []interface{}{DIVIDE, []interface{}{MULTIPLY, 40, 50}, 60}, 70}, 80},
 	}
 
 	timeAST(ast)

@@ -3,7 +3,7 @@
 const ADD       = 0;
 const SUBSTRACT = 1;
 const MULTIPLY  = 2;
-const DEVIDE    = 3;
+const DIVIDE    = 3;
 const SUM       = 4;
 
 $functions = array(
@@ -19,7 +19,7 @@ $functions = array(
         return $args[0] * $args[1];
     },
 
-    DEVIDE => function($args) {
+    DIVIDE => function($args) {
         return $args[0] / $args[1];
     },
 
@@ -72,10 +72,10 @@ function timeAST($ast) {
 }
 
 $ast = [SUM,
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,10,20],30],40],50],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,20,30],40],50],60],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,30,40],50],60],70],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,10,20],30],40],50],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,20,30],40],50],60],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,30,40],50],60],70],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,40,50],60],70],80]
 ];
 
 timeAST($ast);

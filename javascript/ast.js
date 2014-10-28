@@ -3,14 +3,14 @@
 var ADD       = 0;
 var SUBSTRACT = 1;
 var MULTIPLY  = 2;
-var DEVIDE    = 3;
+var DIVIDE    = 3;
 var SUM       = 4;
 
 var functions = [];
 functions[ADD]       = function(args) { return +args[0] + +args[1]; };
 functions[SUBSTRACT] = function(args) { return +args[0] - +args[1]; };
 functions[MULTIPLY]  = function(args) { return +args[0] * +args[1]; };
-functions[DEVIDE]    = function(args) { return +args[0] / +args[1]; };
+functions[DIVIDE]    = function(args) { return +args[0] / +args[1]; };
 
 functions[SUM] = function(args) {
     var sum = 0;
@@ -56,10 +56,10 @@ function timeAST(ast) {
 }
 
 var ast = [ SUM,
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,10,20],30],40],50],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,20,30],40],50],60],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,30,40],50],60],70],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,10,20],30],40],50],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,20,30],40],50],60],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,30,40],50],60],70],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,40,50],60],70],80]
 ];
 
 

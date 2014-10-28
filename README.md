@@ -6,13 +6,21 @@ The benchmark was written for real life task: computing excel formulas. I unders
 We do calculation of abstract syntax tree that represents simple mathematical formula:
 
     [SUM,
-        [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,10,20],30],40],50],
-        [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,20,30],40],50],60],
-        [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,30,40],50],60],70],
-        [SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
+        [SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,10,20],30],40],50],
+        [SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,20,30],40],50],60],
+        [SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,30,40],50],60],70],
+        [SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,40,50],60],70],80]
     ]
 
 We do 100000 iterations and after comleting check the sum of all results to ensure that the calculations were not skipped by optimizer.
+
+## Notes
+
+SUM should be implemented using loop. Do not use built-in "sum". Using external "sum" will be unfair for the following reasons: 
+
+1. built-in "sum" is native and does not show language performance.
+2. real "SUM" will have more complex logic and will check values while iterating them and this requires loop to be written.
+
 
 ## Results
 

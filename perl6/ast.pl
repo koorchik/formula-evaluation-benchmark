@@ -1,7 +1,7 @@
 my $ADD       = 0;
 my $SUBSTRACT = 1;
 my $MULTIPLY  = 2;
-my $DEVIDE    = 3;
+my $DIVIDE    = 3;
 my $SUM       = 4;
 
 my %functions = (
@@ -17,7 +17,7 @@ my %functions = (
         return @args[0] * @args[1];
     },
 
-    $DEVIDE => sub (@args) {
+    $DIVIDE => sub (@args) {
         return @args[0] / @args[1];
     },
 
@@ -69,10 +69,10 @@ sub time_ast(@ast) {
 }
 
 my $ast = [$SUM,
-    [$SUBSTRACT,[$ADD,[$DEVIDE,[$MULTIPLY,10,20],30],40],50],
-    [$SUBSTRACT,[$ADD,[$DEVIDE,[$MULTIPLY,20,30],40],50],60],
-    [$SUBSTRACT,[$ADD,[$DEVIDE,[$MULTIPLY,30,40],50],60],70],
-    [$SUBSTRACT,[$ADD,[$DEVIDE,[$MULTIPLY,40,50],60],70],80]
+    [$SUBSTRACT,[$ADD,[$DIVIDE,[$MULTIPLY,10,20],30],40],50],
+    [$SUBSTRACT,[$ADD,[$DIVIDE,[$MULTIPLY,20,30],40],50],60],
+    [$SUBSTRACT,[$ADD,[$DIVIDE,[$MULTIPLY,30,40],50],60],70],
+    [$SUBSTRACT,[$ADD,[$DIVIDE,[$MULTIPLY,40,50],60],70],80]
 ];
 
 time_ast($ast);

@@ -6,7 +6,7 @@ use constant {
     ADD       => 0,
     SUBSTRACT => 1,
     MULTIPLY  => 2,
-    DEVIDE    => 3,
+    DIVIDE    => 3,
     SUM       => 4
 };
 
@@ -26,7 +26,7 @@ my %functions = (
         return $args->[0] * $args->[1];
     },
 
-    DEVIDE() => sub {
+    DIVIDE() => sub {
         my $args = shift;
         return $args->[0] / $args->[1];
     },
@@ -81,10 +81,10 @@ sub time_ast {
 }
 
 my $ast = [SUM,
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,10,20],30],40],50],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,20,30],40],50],60],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,30,40],50],60],70],
-    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,10,20],30],40],50],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,20,30],40],50],60],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,30,40],50],60],70],
+    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,40,50],60],70],80]
 ];
 
 time_ast($ast);
