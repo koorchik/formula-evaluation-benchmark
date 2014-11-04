@@ -4,7 +4,7 @@ import sys
 ADD         = 0
 SUBSTRACT   = 1
 MULTIPLY    = 2
-DIVIDE      = 3
+DEVIDE      = 3
 SUM         = 4
 
 def list_sum(arr):
@@ -19,7 +19,7 @@ functions = {
     ADD         : lambda args: args[0] + args[1],
     SUBSTRACT   : lambda args: args[0] - args[1],
     MULTIPLY    : lambda args: args[0] * args[1],
-    DIVIDE      : lambda args: args[0] / args[1],
+    DEVIDE      : lambda args: args[0] / args[1],
     SUM         : list_sum
 
 }
@@ -54,10 +54,10 @@ def time_AST(ast):
     #     sys.exit("WRONG SUM {}".format(result))
 
 ast = [SUM,
-    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,10,20],30],40],50],
-    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,20,30],40],50],60],
-    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,30,40],50],60],70],
-    [ SUBSTRACT,[ADD,[DIVIDE,[MULTIPLY,40,50],60],70],80]
+    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,10,20],30],40],50],
+    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,20,30],40],50],60],
+    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,30,40],50],60],70],
+    [ SUBSTRACT,[ADD,[DEVIDE,[MULTIPLY,40,50],60],70],80]
 ]
 
 if __name__ == '__main__':
