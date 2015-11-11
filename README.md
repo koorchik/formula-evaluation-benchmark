@@ -26,14 +26,17 @@ SUM should be implemented using loop. Do not use built-in "sum". Using external 
 
 Here is the result for Macbook Pro 2013:
 
-1. NodeJS 0.11.14 - 0.11 sec
-2. NodeJS 0.10.33 - 0.18 sec
-3. PHP 5.5.14 - 2.9 sec
-4. Perl 5.20.1 - 3.2 sec
+1. NodeJS 0.12.7 - 0.13 sec
+2. NodeJS 5.0.0 - 0.13 sec
+3. PHP 5.5.29 - 2.7 sec
+4. Perl 5.22.0 - 2.7 sec
 5. Perl 6 (Rakudo Moar VM) - 110 sec (2015 May)
 6. Perl 6 (Rakudo Moar VM) - 85 sec (2015 October)
-6. Perl 6 (Rakudo JVM) - 160 sec
-7. Perl 6 (Rakudo Parrot) - ~810 sec
-8. Go 1.3.3 (unidiomatic version) - 0.25 sec
-9. Go 1.3.3 (idiomatic version) - 0.026 sec
-10. Python 2.7.8 - 3.1 sec
+7. Perl 6 (Rakudo Moar VM) - 69 sec (2015 November)
+8. Perl 6 (Rakudo JVM) - 160 sec (2015 May)
+9. Perl 6 (Rakudo Parrot) - ~810 sec (2015 May)
+10. Go 1.3.3 (unidiomatic version) - 0.29 sec
+11. Go 1.3.3 (idiomatic version) - 0.026 sec
+12. Python 2.7.9 - 2.8 sec
+13. PyPy (Python 2.7.10) - 0.24 sec
+14. PyPy3 (Python 3.2.5) - 0.35 sec
