@@ -1,8 +1,8 @@
-my $ADD       = 0;
-my $SUBSTRACT = 1;
-my $MULTIPLY  = 2;
-my $DIVIDE    = 3;
-my $SUM       = 4;
+my Int $ADD       = 0;
+my Int $SUBSTRACT = 1;
+my Int $MULTIPLY  = 2;
+my Int $DIVIDE    = 3;
+my Int $SUM       = 4;
 
 my %functions = (
     $ADD => sub (@args) {

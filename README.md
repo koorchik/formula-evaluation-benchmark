@@ -16,7 +16,7 @@ We do 100000 iterations and after comleting check the sum of all results to ensu
 
 ## Notes
 
-SUM should be implemented using loop. Do not use built-in "sum". Using external "sum" will be unfair for the following reasons: 
+SUM should be implemented using loop. Do not use built-in "sum". Using external "sum" will be unfair for the following reasons:
 
 1. built-in "sum" is native and does not show language performance.
 2. real "SUM" will have more complex logic and will check values while iterating them and this requires loop to be written.
@@ -28,15 +28,14 @@ Here is the result for Macbook Pro 2013:
 
 1. NodeJS 0.12.7 - 0.13 sec
 2. NodeJS 5.0.0 - 0.13 sec
-3. PHP 5.5.29 - 2.7 sec
-4. Perl 5.22.0 - 2.7 sec
-5. Perl 6 (Rakudo Moar VM) - 110 sec (2015 May)
-6. Perl 6 (Rakudo Moar VM) - 85 sec (2015 October)
-7. Perl 6 (Rakudo Moar VM) - 69 sec (2015 November)
-8. Perl 6 (Rakudo JVM) - 160 sec (2015 May)
-9. Perl 6 (Rakudo Parrot) - ~810 sec (2015 May)
-10. Go 1.3.3 (unidiomatic version) - 0.29 sec
-11. Go 1.3.3 (idiomatic version) - 0.026 sec
-12. Python 2.7.9 - 2.8 sec
-13. PyPy (Python 2.7.10) - 0.24 sec
-14. PyPy3 (Python 3.2.5) - 0.35 sec
+3. NodeJS 6.4.0 - 0.2 sec
+4. PHP 5.5.29 - 2.7 sec
+5. Perl 5.22.0 - 2.7 sec
+6. Perl 6 (Rakudo Moar VM) - 110 sec (2015 May), 85 sec (2015 October), 69 sec (2015 November), 40 sec (2016 September)
+7. Perl 6 (Rakudo JVM) - 160 sec (2015 May)
+8. Perl 6 (Rakudo Parrot) - ~810 sec (2015 May)
+9. Go 1.3.3 (unidiomatic version) - 0.29 sec
+10. Go 1.3.3 (idiomatic version) - 0.026 sec
+11. Python 2.7.9 - 2.8 sec
+12. PyPy (Python 2.7.10) - 0.24 sec
+13. PyPy3 (Python 3.2.5) - 0.35 sec
