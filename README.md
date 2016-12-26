@@ -32,11 +32,11 @@ Here is the result for Macbook Pro 2013:
 4. PHP 5.5.29 - 2.7 sec
 5. Perl 5.22.0 - 2.7 sec
 6. Perl 6 (Rakudo Moar VM)
-  6.1. 37 sec (2016 December)
-  6.2. 40 sec (2016 September)
-  6.3. 69 sec (2015 November)
-  6.4. 85 sec (2015 October)
-  6.5 110 sec (2015 May)
+  * 37 sec (2016 December)
+  * 40 sec (2016 September)
+  * 69 sec (2015 November)
+  * 85 sec (2015 October)
+  * 110 sec (2015 May)
 7. Perl 6 (Rakudo JVM) - 160 sec (2015 May)
 8. Perl 6 (Rakudo Parrot) - ~810 sec (2015 May)
 9. Go 1.3.3 (unidiomatic version) - 0.29 sec
