@@ -44,4 +44,4 @@ Here is the result for Macbook Pro 2013:
 11. Python 2.7.9 - 2.8 sec
 12. PyPy (Python 2.7.10) - 0.24 sec
 13. PyPy3 (Python 3.2.5) - 0.35 sec
-14. Rust 1.14 - 0.08 sec 
+14. Rust 1.14 (naive implementation) - 0.08 sec 
